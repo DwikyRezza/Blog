@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Blog pembelajaran Bahasa Inggris untuk mahasiswa Telkom University. Artikel berkualitas tentang grammar, vocabulary, pronunciation, dan academic writing.">
+    <meta name="keywords" content="belajar bahasa inggris, english learning, telkom university, blog bahasa inggris">
+    <meta name="author" content="Rezza Maulana">
+
+    <title>English Learning Blog - Telkom University</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">EnglishHub</a>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Welcome to EnglishHub</h1>
+            <p>Your gateway to mastering English. Discover articles on grammar, vocabulary, pronunciation, and academic
+                writing tailored for university students.</p>
+            <a href="#articles" class="btn-primary">Explore Articles</a>
+        </div>
+    </section>
+
+    <!-- ==================== SEARCH & FILTER ==================== -->
+    <section class="search-filter-section">
+        <div class="container">
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="text" id="search-input"
+                    placeholder="Cari artikel berdasarkan judul, kategori, atau konten..." autocomplete="off">
+                <button id="search-btn">Search</button>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-kategori="all">All Articles</button>
+                <button class="filter-btn" data-kategori="Technology">Technology</button>
+                <button class="filter-btn" data-kategori="Learning">Learning</button>
+                <button class="filter-btn" data-kategori="Grammar">Grammar</button>
+                <button class="filter-btn" data-kategori="Speaking">Speaking</button>
+                <button class="filter-btn" data-kategori="Academic">Academic</button>
+            </div>
+
+            <!-- Result Count -->
+            <p class="result-count" id="result-count">Menampilkan semua artikel</p>
+        </div>
+    </section>
+
+    <!-- ==================== ARTIKEL LIST ==================== -->
+    <section id="articles">
+        <div class="container">
+            <h2 class="text-center mb-20">Latest Articles</h2>
+
+            <!-- Artikel Grid - Diisi oleh JavaScript -->
+            <div class="artikel-grid" id="artikel-container">
+                <!-- Artikel cards akan di-render oleh main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3>About EnglishHub</h3>
+                    <p>Platform pembelajaran Bahasa Inggris untuk mahasiswa Telkom University. Kami menyediakan artikel
+                        berkualitas untuk membantu Anda menguasai Bahasa Inggris.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@englishhub.edu</p>
+                    <p>Telkom University</p>
+                    <p>Bandung, Indonesia</p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 EnglishHub - Telkom University. Tugas Bahasa Inggris Semester 5.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
