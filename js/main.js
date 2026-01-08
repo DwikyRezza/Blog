@@ -413,7 +413,7 @@ function renderAboutPage() {
                         </ul>
                     </div>
                     <p class="dosen-contact"><strong>Email:</strong> ${dosen.email}</p>
-                    <p class="dosen-office"><strong>Ruangan:</strong> ${dosen.office}</p>
+                    ${dosen.office ? `<p class="dosen-office"><strong>Ruangan:</strong> ${dosen.office}</p>` : ''}
                 </div>
             </div>
         `;
