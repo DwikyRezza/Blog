@@ -32,7 +32,7 @@ const anggotaKelompok = [
         nim: "1202230029",
         role: "Anggota",
         foto: "assets/images/afrizal.jpg",
-        bio: "Mahasiswa Teknik Informatika dengan minat pada pembelajaran bahasa dan teknologi pendidikan. Aktif di organisasi kampus.",
+        bio: "I am an Information Technology student with a bunch of interests in IOT and AI.",
         email: "afrizalrizkys@student.telkomuniversity.ac.id"
     },
     {
@@ -220,11 +220,11 @@ const artikelData = [
             <p>Steam shows how technology can bring people from around the world into one shared digital space. It helps gamers make new friendships, work together in teams, and express creativity through mods and community projects. Although challenges like toxicity, addiction, and privacy risks remain, these problems can be reduced through responsible use, better rules, and strong digital education. If used wisely, platforms like Steam prove that online spaces can create meaningful relationships and help people understand each other, no matter how far apart they live.</p>
         `,
         tanggal: "2026-1-7",
-        kategori: "Technology",
+        kategori: "gaming",
         thumbnail: "assets/images/steam-banner.jpg",
         gambarHeader: "assets/images/steam-banner.jpg",
         penulisId: 2,
-        readTime: "6 min read"
+        readTime: "10 min read"
     },
     {
         id: 3,
