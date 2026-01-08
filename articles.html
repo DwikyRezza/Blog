@@ -4,19 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Browse all English learning articles - Grammar, Vocabulary, Pronunciation, Academic Writing">
-    <meta name="keywords" content="english articles, learning resources, blog posts">
+    <meta name="description" content="Browse all English learning articles - Technology, Learning, Academic Writing">
+    <meta name="keywords" content="english articles, learning resources, blog posts, technology">
+    <title>All Projects</title>
 
-    <title>All Articles - EnglishHub</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap"
         rel="stylesheet">
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,80 +20,163 @@
         <nav class="container">
             <a href="index.html" class="logo-link">
                 <img src="assets/images/telkom-university-seeklogo.png" alt="Telkom University" class="logo-image">
+                <!-- <span class="logo-text">EnglishHub</span> -->
             </a>
 
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <!-- Navigation Menu -->
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="articles.html" class="nav-link active">Articles</a></li>
+                <li><a href="articles.html" class="nav-link active">Projects</a></li>
             </ul>
-
-            <!-- CTA Button -->
-            <a href="articles.html" class="nav-cta">View Essays</a>
+            <!-- 
+            <a href="articles.html" class="nav-cta">
+                <span>View Essays</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a> -->
         </nav>
     </header>
 
     <!-- ==================== PAGE HEADER ==================== -->
-    <section class="page-header">
+    <section class="page-header-modern">
         <div class="container">
-            <h1>All Articles</h1>
-            <p>Explore our collection of English learning resources</p>
+            <div class="page-header-content">
+                <span class="page-badge">
+                    <span class="badge-dot"></span>
+                    EXPLORE
+                </span>
+                <h1>All Projects</h1>
+                <p>Discover our comprehensive collection of projects in English Class</p>
+            </div>
         </div>
     </section>
 
-    <!-- ==================== SEARCH & FILTER ==================== -->
-    <section class="search-filter-section">
-        <div class="container">
-            <!-- Search Box -->
-            <div class="search-box">
-                <input type="text" id="search-input" placeholder="Search articles by title, category, or content..."
-                    autocomplete="off">
-                <button id="search-btn">Search</button>
-            </div>
-
-            <!-- Filter Buttons -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-kategori="all">All Articles</button>
-                <button class="filter-btn" data-kategori="Technology">Technology</button>
-                <button class="filter-btn" data-kategori="Learning">Learning</button>
-                <button class="filter-btn" data-kategori="Academic">Academic</button>
-            </div>
-
-            <!-- Result Count -->
-            <p class="result-count" id="result-count">Showing all articles</p>
+    <section id="assignments" class="container assignments-section">
+        <div class="section-header">
+            <!-- <div class="section-badge">Latest</div> -->
+            <h2>Our Assignments</h2>
+            <p>Explore our collection of essays, slides, annotated text, and self introduction.</p>
         </div>
-    </section>
 
-    <!-- ==================== ARTIKEL LIST ==================== -->
-    <section id="articles">
-        <div class="container">
-            <!-- Artikel Grid - Filled by JavaScript -->
-            <div class="artikel-grid" id="artikel-container">
-                <!-- Article cards will be rendered by main.js -->
+        <section class="assignment-navigation container">
+            <div class="assignment-menu">
+                <a href="#essays" class="assignment-link active" data-section="essays">
+                    <div class="assignment-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M12 16H15M9 12H9.01M9 16H9.01"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="assignment-info">
+                        <span class="assignment-title">Essays</span>
+                        <span class="assignment-desc">Read our articles</span>
+                    </div>
+                </a>
+                <a href="#slides" class="assignment-link" data-section="slides">
+                    <div class="assignment-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M8 10L12 8L16 10M12 14L12 8" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="assignment-info">
+                        <span class="assignment-title">Slides</span>
+                        <span class="assignment-desc">View presentations</span>
+                    </div>
+                </a>
+                <a href="#annotated" class="assignment-link" data-section="annotated">
+                    <div class="assignment-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5C15 6.10457 14.1046 7 13 7H11C9.89543 7 9 6.10457 9 5Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="assignment-info">
+                        <span class="assignment-title">Annotated Text</span>
+                        <span class="assignment-desc">Explore annotations</span>
+                    </div>
+                </a>
+                <a href="#introduction" class="assignment-link" data-section="introduction">
+                    <div class="assignment-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="2" />
+                            <path d="M6 21C6 17.134 8.68629 14 12 14C15.3137 14 18 17.134 18 21" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="assignment-info">
+                        <span class="assignment-title">Self Introduction</span>
+                        <span class="assignment-desc">Meet the authors</span>
+                    </div>
+                </a>
             </div>
+        </section>
+
+        <!-- Essays Section -->
+        <div id="essays" class="assignment-content active">
+            <h3 class="content-section-title">Essays</h3>
+            <div class="artikel-grid" id="artikel-container"></div>
+        </div>
+
+        <!-- Slides Section -->
+        <div id="slides" class="assignment-content">
+            <h3 class="content-section-title">Presentation Slides</h3>
+            <div class="slides-grid" id="slides-container"></div>
+        </div>
+
+        <!-- Annotated Text Section -->
+        <div id="annotated" class="assignment-content">
+            <h3 class="content-section-title">Annotated Texts</h3>
+            <div class="annotated-grid" id="annotated-container"></div>
+        </div>
+
+        <!-- Self Introduction Section -->
+        <div id="introduction" class="assignment-content">
+            <h3 class="content-section-title">Self Introductions</h3>
+            <div class="intro-grid" id="intro-container"></div>
         </div>
     </section>
 
     <!-- ==================== FOOTER ==================== -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- About Section -->
-                <div class="footer-section">
-                    <h3>About EnglishHub</h3>
-                    <p>An English learning platform for Telkom University students. We provide quality articles to help
-                        you master the English language.</p>
+        <div class="container footer-content">
+            <div class="footer-main">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/images/telkom-university-seeklogo.png" alt="Logo" class="logo-image">
+                        <!-- <span>EnglishHub</span> -->
+                    </div>
+                    <p>A collection of English assignments written by Afrizal, Rezza, Yuliana, and Lely as part of an English class.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M10 0C4.477 0 0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.879V12.89h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.989C16.343 19.129 20 14.99 20 10c0-5.523-4.477-10-10-10z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-
-                <!-- Quick Links -->
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -108,26 +185,113 @@
                         <li><a href="articles.html">Articles</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="articles.html">Technology</a></li>
+                        <li><a href="articles.html">Learning</a></li>
+                        <li><a href="articles.html">Academic</a></li>
+                    </ul>
+                </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>Email: info@englishhub.edu</p>
-                    <p>Telkom University</p>
-                    <p>Bandung, Indonesia</p>
+                    <ul class="footer-links">
+                        <li>Surabaya</li>
+                        <li>info@englishcorner.edu</li>
+                        <li>Telkom University Surabaya</li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>&copy; 2025 EnglishHub - Telkom University. English Course Project Semester 5.</p>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 EnglishCorner - Telkom University Surabaya. English Course Project Semester 5.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- ==================== SCRIPTS ==================== -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
+
+    <style>
+        .page-header-modern {
+            background: linear-gradient(135deg, var(--secondary) 0%, #0F0F1E 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header-modern::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(227, 30, 36, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: var(--radius-full);
+            font-weight: 800;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .page-header-modern h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .page-header-modern p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .result-count {
+            text-align: center;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-top: 24px;
+        }
+    </style>
 </body>
 
 </html>
