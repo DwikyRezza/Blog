@@ -38,7 +38,7 @@
 ### Anggota Kelompok
 
 1. **Muhammad Dwiky Yanuarezza** (1202230031) - Ketua Kelompok
-2. **Muhammad Afrizal** (103062300002) - Anggota
+2. **Muhammad Afrizal Rizky Setyawan** (1202230029) - Anggota
 3. **Budi Santoso** (103062300003) - Anggota
 4. **Citra Dewi Lestari** (103062300004) - Anggota
 
