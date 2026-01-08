@@ -49,7 +49,7 @@ const anggotaKelompok = [
         nama: "Lely Sylva Jemima Tarigan",
         nim: "1202230034",
         role: "Anggota",
-        foto: "assets/images/Lely.jpeg",
+        foto: "assets/images/lely.jpeg",
         bio: "Information Technology students at Telkom University Surabaya who are interested in learning English and improving their writing skills through academic projects and collaborations.",
         email: "lelysjtrg@student.telkomuniversity.ac.id"
     }
