@@ -37,12 +37,12 @@ const anggotaKelompok = [
     },
     {
         id: 3,
-        nama: "Budi Santoso",
-        nim: "103062300003",
+        nama: "Yuliana Nur Hanifah",
+        nim: "1202230033",
         role: "Anggota",
-        foto: "assets/images/anggota3.jpg",
-        bio: "Mahasiswa yang antusias dalam belajar Bahasa Inggris dan berbagi pengetahuan melalui artikel-artikel edukatif.",
-        email: "budi@student.telkomuniversity.ac.id"
+        foto: "assets/images/Yuliana Nur Hanifah.jpg",
+        bio: "Undergraduate student at Telkom University Surabaya majoring in Information Technology",
+        email: "yuliananurhanifah@student.telkomuniversity.ac.id"
     },
     {
         id: 4,
@@ -228,37 +228,76 @@ const artikelData = [
     },
     {
         id: 3,
-        judul: "Common Grammar Mistakes Indonesian Speakers Make",
-        ringkasan: "Learn about the most frequent grammar errors made by Indonesian learners of English and how to avoid them.",
+        judul: "Digital Transformation as the Key to Business Success in the Modern Era",
+        ringkasan: "Digital transformation is a fundamental pillar for modern business success, enabling companies to improve efficiency, enhance customer experience, and strengthen long-term competitiveness. Without proper adaptation, businesses risk falling behind in an increasingly digital and competitive environment.",
+
         konten: `
-            <h2>Understanding the Challenge</h2>
-            <p>Indonesian and English have fundamentally different grammar structures. This leads to specific patterns of errors that Indonesian speakers commonly make when learning English.</p>
-            
-            <h2>1. Article Usage (A, An, The)</h2>
-            <p>Indonesian doesn't have articles, making "a," "an," and "the" particularly challenging. Remember: use "a/an" for non-specific items, "the" for specific ones, and no article for general plurals.</p>
-            
-            <h2>2. Subject-Verb Agreement</h2>
-            <p>In Indonesian, verbs don't change based on the subject. In English, remember: "He goes" (not "he go"), "She has" (not "she have").</p>
-            
-            <h2>3. Plural Forms</h2>
-            <p>Indonesian uses repetition or context for plurals. In English, add -s or -es: "one book, two books" (not "two book").</p>
-            
-            <h2>4. Verb Tenses</h2>
-            <p>Indonesian relies on time markers rather than verb changes. English requires proper tense usage: "I ate yesterday" (not "I eat yesterday").</p>
-            
-            <h2>5. Prepositions</h2>
-            <p>Prepositions often don't translate directly. Learn common combinations through exposure and practice.</p>
-            
-            <h2>Conclusion</h2>
-            <p>Awareness of these common mistakes is the first step to avoiding them. Practice consistently and don't be afraid to make mistakes—they're part of learning!</p>
-        `,
-        tanggal: "2025-01-02",
-        kategori: "Grammar",
-        thumbnail: "assets/images/article3.jpg",
-        gambarHeader: "assets/images/article3-header.jpg",
+        <h2>Introduction</h2>
+        <p>
+            Technological innovation has vastly altered the business landscape across all industrial sectors. From newly established enterprises to large corporations, everyone is feeling the effects of digital technology advancements. There are still a few traditional businesses that prefer to stick with their manual systems, which they have been using for years and consider them adequate; however, most believe that digital transformation is not an idea of the future but rather a need to stay current with changing consumer behaviors and intense market competition. In the end, digital transformation does not make up a wave but is rather an essential pillar for business success through efficiency improvement, better customer experience, building competitiveness of the businesses themselves, and meeting challenges in the future.
+        </p>
+
+        <h2>Understanding Digital Transformation</h2>
+        <p>
+            Digital transformation is not about sitting in front of computers. It has nothing to do with new software installed. Rather, it involves the application of technology in different business areas to ensure precise, fast, and efficient operations. For instance, companies may adopt data analytics for better decision-making based on more accurate information. They can implement automation to replace time-consuming manual tasks with repetitive actions. Simple use of cloud storage is already a digital transformation because this means file access from anywhere by the employees without dependence on one device. To put it differently, digital transformation is reshaping the mode of operation in an organization to fit into such an aggressive environment.
+        </p>
+
+        <h2>Why Businesses Need Digital Transformation</h2>
+        <p>
+            The reason businesses need digital transformation is actually simple: the world has changed, and so have the customers. People now want things to be fast, convenient, and accessible. They want services that are phone reachable, smooth transactions, and personal experiences. If a company doesn’t adapt to this change, one of its competitors providing modern solutions might snatch their customers. Manual processes also impede operations, up the ante in terms of errors, and are hard to work upon. In contrast, digital systems allow automation of most processes which in turn increases productivity and reduces operational costs. Therefore, digital transformation is not something that has to be done just for the sake of being in the trend, rather, it is a necessity to survive and compete in this kind of market.
+        </p>
+
+        <h2>Benefits and Challenges</h2>
+        <p>
+            Digital transformation comes with benefits. First, businesses become more efficient because technology takes care of much of their trivial work. Employees become fruitful hence they can now concentrate on other important matters. Decisions are better made out of real-time data rather than assumptions. But with change, challenges follow. The cost of acquiring technology can be quite expensive, especially for smaller companies. Labor does not possess the digital skills that are required to operate new systems, hence training has to be done for employees. Another major concern is data security since more information will now be stored digitally. Though met with much hindrance, most firms still push through because in the end, when all has been said and done and tallied up, the benefits far outweigh the problems encountered at the beginning.
+        </p>
+
+        <h2>Real Examples and Future Impact</h2>
+        <p>
+            There are a number of companies that have thrived because of digital transformation. Netflix used to provide DVD rental services, now it operates as a global streaming platform essentially on the back of data and digital innovation. Among others, Amazon is recognized for having an extremely efficient logistics system plus utilizing artificial intelligence in personalizing recommendations to customers. In Indonesia, Gojek has redesigned how people get rides, make payments, and access many daily services by creating a digital ecosystem connecting millions of users. These firms prove that while some may view digital transformation as nothing more than improving operations, it can indeed completely reorganize an entire business model. In the future, technology such as AI, automation, or big data regarding corporate strategies. Companies that refuse to adapt may find it difficult to keep up in this fast-moving environment.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+            Digital transformation therefore clearly denotes a basic pillar of success in contemporary businesses. This makes companies work efficiently by offering good experiences to customers and sustaining solid long-term competitiveness. Firms that embrace the fast changes in technology will be able to thrive as technology keeps on advancing. Moreover, any firm that resists change is bound to lag behind. Eventually, digital transformation is not an option but rather the means that would keep a company relevant going into the future. 
+        </p>
+
+        <div class="references-section">
+            <h2>References</h2>
+            <ul class="references-list">
+                <li>Agustian, K., et al. (2023). The Impact of Digital Transformation on Business Models and Competitive Advantage. <em>TACIT</em>.</li>
+                <li>Fadhlurrahman, M. A., & Info, A. (2024). An Academic Analysis of Digital Transformation. <em>SITJ</em>.</li>
+                <li>Hamiduddin, A. Y. (n.d.). Digital Business Transformation in Economy 4.0. <em>JESS</em>.</li>
+                <li>Sri Wulan, T., et al. (2024). Digital Transformation and Organizational Performance. <em>JE3S</em>.</li>
+                <li>Vaska, S., et al. (2021). Digital Transformation of Business Model Innovation. <em>Frontiers in Psychology</em>.</li>
+                <li>Digital Transformation as a Strategy to Improve Business Performance in the Retail Sector. <em>EDUCTUM Journal</em>.</li>
+            </ul>
+        </div>
+    `,
+
+        slideUrl: "https://docs.google.com/presentation/d/e/2PACX-1vSample/embed",
+        slideTitle: "Digital Transformation in Business – Presentation Slides",
+
+        selfIntro: `
+        <p>
+            Hello! My name is <strong>Yuliana Nur Hanifah</strong>, an undergraduate student majoring in Information Technology.
+            I wrote this essay to explore how digital transformation has become a key driver of business success in today’s competitive environment.
+        </p>
+        <p>
+            Through this article, I aim to highlight not only the benefits of digital transformation,
+            but also the challenges businesses face when adapting to technological change.
+            I hope this discussion provides useful insights into why digital transformation is no longer optional for modern organizations.
+        </p>
+    `,
+
+        tanggal: "2025-01-07",
+        kategori: "Business & Technology",
+        thumbnail: "assets/images/digital-transformation-business.png",
+        gambarHeader: "assets/images/digital-transformation-business.png",
         penulisId: 3,
-        readTime: "7 min read"
+        readTime: "5 min read"
     },
+
     {
         id: 4,
         judul: "How to Improve Your English Pronunciation",
