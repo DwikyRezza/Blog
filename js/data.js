@@ -11,7 +11,7 @@ const dosenData = {
     institusi: "Telkom University",
     mataKuliah: ["English for Academic"],
     foto: "assets/images/dosen.jpg",
-    deskripsi: "An experienced lecturer with over 15 years of experience teaching English at various renowned universities. Her research focuses on technology-based language learning and the development of digital literacy.",
+    deskripsi: "An experienced English lecturer at various renowned universities. Her research focuses on technology-based language learning and the development of digital literacy.",
     email: "aldadeadelfina@telkomuniversity.ac.id",
 };
 
