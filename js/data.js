@@ -7,11 +7,11 @@
 const dosenData = {
     id: 1,
     nama: "Alda Dea Delfina S.Pd M. Tesol",
-    gelar: "Doktor Pendidikan Bahasa Inggris",
+    gelar: "Master of TESOL Monash University Australia",
     institusi: "Telkom University",
-    mataKuliah: ["Bahasa Inggris", "Academic Writing", "English for Business"],
+    mataKuliah: ["English for Academic"],
     foto: "assets/images/dosen.jpg",
-    deskripsi: "Dosen berpengalaman lebih dari 15 tahun dalam mengajar Bahasa Inggris di berbagai universitas ternama. Fokus penelitian pada pembelajaran bahasa berbasis teknologi dan pengembangan literasi digital.",
+    deskripsi: "An experienced lecturer with over 15 years of experience teaching English at various renowned universities. Her research focuses on technology-based language learning and the development of digital literacy.",
     email: "aldadeadelfina@telkomuniversity.ac.id",
 };
 
@@ -32,7 +32,7 @@ const anggotaKelompok = [
         nim: "1202230029",
         role: "Anggota",
         foto: "assets/images/afrizal.jpg",
-        bio: "I am an Information Technology student with a bunch of interests in IOT and AI.",
+        bio: "I am an Information Technology student who is deeply passionate about the intersection of Internet of Things (IoT) and Artificial Intelligence. I believe that the future of technology lies in how we can make our physical environment smarter and more responsive through data-driven insights. In my spare time, I love exploring new gadgets and working on small hardware projects to sharpen my technical skills. My goal is to use my knowledge of AI to create innovative solutions that can solve real-world problems and make daily life more efficient for everyone.",
         email: "afrizalrizkys@student.telkomuniversity.ac.id"
     },
     {
@@ -219,8 +219,40 @@ const artikelData = [
             <h2>Conclusion</h2>
             <p>Steam shows how technology can bring people from around the world into one shared digital space. It helps gamers make new friendships, work together in teams, and express creativity through mods and community projects. Although challenges like toxicity, addiction, and privacy risks remain, these problems can be reduced through responsible use, better rules, and strong digital education. If used wisely, platforms like Steam prove that online spaces can create meaningful relationships and help people understand each other, no matter how far apart they live.</p>
         `,
-        tanggal: "2026-1-7",
-        kategori: "gaming",
+
+        // SLIDE PRESENTATION
+        slideUrl: "https://docs.google.com/presentation/d/e/2PACX-1vSampleGaming/embed",
+        slideTitle: "Gaming Platforms & Global Connection - Presentation",
+
+        // ANNOTATED TEXT
+        annotatedText: `
+    <div class="annotated-section">
+        <h3>Digital Community</h3>
+        <p class="annotated-paragraph">
+            Platforms like Steam function as a 
+            <span class="annotation" data-note="A group of people interacting in a virtual space around shared interests">digital community</span>
+            where social interaction is just as important as the games themselves.
+        </p>
+    </div>
+    
+    <div class="annotated-section">
+        <h3>Toxic Behavior</h3>
+        <p class="annotated-paragraph">
+            One of the biggest challenges in online spaces is 
+            <span class="annotation" data-note="Unkind, harassing, or harmful communication between players">toxic behavior</span>, 
+            which can negatively impact the user experience.
+        </p>
+    </div>
+`,
+
+        // SELF INTRODUCTORY PARAGRAPH
+        selfIntro: `
+    <p>Hello! I am <strong>Mohammad Afrizal Rizky Setyawan</strong>. I am an Information Technology student who is deeply passionate about how technology, especially IoT and AI, can bridge gaps in our daily lives.</p>
+    <p>I wrote this article to explore how gaming platforms like Steam have evolved beyond mere stores into vital social hubs that connect people globally. My background in technology drives me to understand the underlying systems that allow these global communities to thrive. Through this blog, I hope to share my fascination with how digital spaces can create real-world connections and teamwork across borders.</p>
+`,
+
+        tanggal: "2025-01-07",
+        kategori: "Technology",
         thumbnail: "assets/images/steam-banner.jpg",
         gambarHeader: "assets/images/steam-banner.jpg",
         penulisId: 2,
