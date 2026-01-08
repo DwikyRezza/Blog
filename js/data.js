@@ -277,7 +277,7 @@ const artikelData = [
         </div>
     `,
         slideUrl: "assets/slides/lia.pdf",
-        slideTitle: "AI Tools Presentation",
+        slideTitle: "Digital Transformation as the Key to Business Success in the Modern Era",
         slideType: "pdf",
         slideThumbnail: "assets/images/digital-transformation-business.png",
         annotatedPdfUrl: "assets/annotated/lia.pdf",
