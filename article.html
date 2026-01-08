@@ -1,159 +1,627 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Baca artikel lengkap tentang pembelajaran Bahasa Inggris">
-    <meta name="keywords" content="artikel bahasa inggris, english learning">
-
-    <title>Article - English Learning Blog</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700&display=swap"
-        rel="stylesheet">
-
-    <!-- Stylesheet -->
+    <title>Article Detail </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Article Detail Specific Styles */
+        .article-header-premium {
+            background: linear-gradient(135deg, var(--secondary) 0%, #0F0F1E 100%);
+            color: white;
+            padding: 140px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-header-premium::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(227, 30, 36, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(74, 144, 226, 0.2) 0%, transparent 50%);
+            animation: pulse 10s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .article-header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .article-header-content .kategori-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 8px 20px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+        
+        .article-title {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: white;
+        }
+        
+        .article-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+        }
+        
+        .article-meta-premium {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .author-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
+        }
+        
+        .meta-details {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .article-main-content {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .tab-navigation-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: -60px;
+            position: relative;
+            z-index: 100;
+            margin-bottom: 60px;
+        }
+        
+        .article-tabs-pill {
+            background: white;
+            padding: 8px;
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            border: none;
+            background: transparent;
+            padding: 14px 28px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            color: var(--text-muted);
+            font-family: var(--font-body);
+        }
+        
+        .tab-btn:hover {
+            background: var(--bg-body);
+            color: var(--secondary);
+        }
+        
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            box-shadow: var(--shadow-primary);
+        }
+        
+        .tab-content-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeInUp 0.6s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .article-body-glass {
+            background: white;
+            padding: 60px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            line-height: 1.8;
+        }
+        
+        .article-body-glass h2 {
+            font-size: 2rem;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            color: var(--secondary);
+            border-bottom: 3px solid var(--primary-soft);
+            padding-bottom: 16px;
+        }
+        
+        .article-body-glass h2:first-child {
+            margin-top: 0;
+        }
+        
+        .article-body-glass h3 {
+            font-size: 1.5rem;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: var(--secondary);
+        }
+        
+        .article-body-glass p {
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+        
+        .article-body-glass ul, .article-body-glass ol {
+            margin: 24px 0;
+            padding-left: 28px;
+        }
+        
+        .article-body-glass li {
+            margin-bottom: 12px;
+        }
+        
+        .article-body-glass blockquote {
+            border-left: 4px solid var(--primary);
+            padding: 24px 32px;
+            margin: 32px 0;
+            background: var(--primary-soft);
+            border-radius: var(--radius-md);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        .keyword-highlight {
+            background: var(--primary-soft);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .important-term {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .key-points-box {
+            background: var(--bg-body);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            margin: 32px 0;
+            border-left: 4px solid var(--accent-blue);
+        }
+        
+        .key-points-box h3 {
+            margin-top: 0;
+            color: var(--accent-blue);
+        }
+        
+        .references-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid #F1F3F5;
+        }
+        
+        .references-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .references-list li {
+            padding: 12px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        .references-list li::before {
+            /* content: '📚'; */
+            position: absolute;
+            left: 0;
+        }
+        
+        .slide-content, .annotated-container-premium, .selfintro-card-premium {
+            background: white;
+            padding: 60px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .slide-content h3 {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        
+        .slide-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .slide-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .annotated-section {
+            margin-bottom: 48px;
+            padding: 32px;
+            background: var(--bg-body);
+            border-radius: var(--radius-lg);
+        }
+        
+        .annotated-section h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .annotation {
+            background: var(--primary-soft);
+            padding: 2px 6px;
+            border-radius: 4px;
+            cursor: help;
+            position: relative;
+        }
+        
+        .annotation-note {
+            margin-top: 16px;
+            padding: 20px;
+            background: white;
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius-md);
+        }
+        
+        .author-intro-card {
+            background: linear-gradient(135deg, var(--bg-body) 0%, white 100%);
+            padding: 48px;
+            border-radius: var(--radius-xl);
+        }
+        
+        .author-intro-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #F1F3F5;
+        }
+        
+        .author-intro-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-soft);
+        }
+        
+        .author-intro-header h3 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        
+        .author-role {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .author-intro-content {
+            line-height: 1.8;
+        }
+        
+        .author-intro-content p {
+            margin-bottom: 20px;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 80px 40px;
+            color: var(--text-muted);
+        }
+        
+        .empty-state svg {
+            margin-bottom: 24px;
+            opacity: 0.5;
+        }
+        
+        .empty-state p {
+            font-size: 1.1rem;
+        }
+        
+        .author-section-premium {
+            padding: 80px 0;
+            background: var(--bg-body);
+        }
+        
+        .author-card-premium {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .author-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-soft);
+            flex-shrink: 0;
+        }
+        
+        .author-details h3 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        
+        .author-role-badge {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .author-bio {
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+        
+        .author-contact {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .author-contact span {
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2.25rem;
+            }
+            
+            .article-body-glass,
+            .slide-content,
+            .annotated-container-premium,
+            .selfintro-card-premium {
+                padding: 32px 24px;
+            }
+            
+            .article-tabs-pill {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .author-card-premium {
+                flex-direction: column;
+                text-align: center;
+                padding: 32px;
+            }
+            
+            .author-intro-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+<body class="article-page">
 
-<body>
-    <!-- ==================== HEADER & NAVIGATION ==================== -->
     <header>
         <nav class="container">
             <a href="index.html" class="logo-link">
                 <img src="assets/images/telkom-university-seeklogo.png" alt="Telkom University" class="logo-image">
+                <!-- <span class="logo-text">EnglishHub</span> -->
             </a>
-
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <!-- Navigation Menu -->
-            <ul class="nav-menu" id="nav-menu">
+            <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="articles.html" class="nav-link">Articles</a></li>
+                <li><a href="articles.html" class="nav-link active">Projects</a></li>
             </ul>
-
-            <!-- CTA Button -->
-            <a href="articles.html" class="nav-cta">View Essays</a>
+            <!-- <a href="articles.html" class="nav-cta">
+                <span>View Essays</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a> -->
         </nav>
     </header>
 
-    <!-- ==================== ARTICLE HEADER ==================== -->
-    <section class="article-header" id="article-header">
-        <!-- Diisi oleh JavaScript -->
-    </section>
+    <section class="article-header-premium" id="article-header"></section>
 
-    <!-- ==================== ARTICLE CONTENT ==================== -->
-    <section class="article-content-wrapper">
-        <!-- Tab Navigation -->
+    <section class="article-main-content">
         <div class="container">
-            <div class="article-tabs">
-                <button class="tab-btn active" data-tab="essay">📝 Essay</button>
-                <button class="tab-btn" data-tab="slide">🖼️ Slide Presentation</button>
-                <button class="tab-btn" data-tab="annotated">📌 Annotated Text</button>
-                <button class="tab-btn" data-tab="selfintro">👤 About the Author</button>
-            </div>
-        </div>
-
-        <!-- Tab Content -->
-        <div class="container">
-            <!-- Essay Tab -->
-            <div class="tab-content active" id="essay-tab">
-                <div class="article-body" id="article-body">
-                    <!-- Essay content will be filled by JavaScript -->
+            <!-- <div class="tab-navigation-wrapper">
+                <div class="article-tabs-pill">
+                    <button class="tab-btn active" data-tab="essay">
+                        📝 Essay
+                    </button>
+                    <button class="tab-btn" data-tab="slide">
+                        🖼️ Slides
+                    </button>
+                    <button class="tab-btn" data-tab="annotated">
+                        📌 Annotated
+                    </button>
+                    <button class="tab-btn" data-tab="selfintro">
+                        👤 Author
+                    </button>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Slide Tab -->
-            <div class="tab-content" id="slide-tab">
-                <div class="slide-container" id="slide-container">
-                    <!-- Slide presentation will be filled by JavaScript -->
+            <div class="tab-content-container">
+                <div class="tab-content active" id="essay-tab">
+                    <div class="article-body-glass" id="article-body"></div>
                 </div>
-            </div>
-
-            <!-- Annotated Text Tab -->
-            <div class="tab-content" id="annotated-tab">
-                <div class="annotated-container" id="annotated-container">
-                    <!-- Annotated text will be filled by JavaScript -->
+                <div class="tab-content" id="slide-tab">
+                    <div class="slide-container-premium" id="slide-container"></div>
                 </div>
-            </div>
-
-            <!-- Self Intro Tab -->
-            <div class="tab-content" id="selfintro-tab">
-                <div class="selfintro-container" id="selfintro-container">
-                    <!-- Self introduction will be filled by JavaScript -->
+                <div class="tab-content" id="annotated-tab">
+                    <div class="annotated-container-premium" id="annotated-container"></div>
+                </div>
+                <div class="tab-content" id="selfintro-tab">
+                    <div class="selfintro-card-premium" id="selfintro-container"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== AUTHOR INFO ==================== -->
-    <section class="author-section">
+    <section class="author-section-premium">
         <div class="container">
-            <h2 class="text-center mb-20">About the Author</h2>
-            <div id="author-info">
-                <!-- Info penulis akan di-render oleh main.js -->
+            <div class="section-header">
+                <div class="section-badge">Author</div>
+                <h2>Writer Profile</h2>
+                <p>Meet the talented writer behind this essay</p>
             </div>
+            <div id="author-info"></div>
         </div>
     </section>
 
-    <!-- ==================== RELATED ARTICLES ==================== -->
-    <section class="related-articles-section">
-        <div class="container">
-            <h2>Related Articles</h2>
-            <div class="related-grid" id="related-articles">
-                <!-- Artikel terkait akan di-render oleh main.js -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== FOOTER ==================== -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- About Section -->
-                <div class="footer-section">
-                    <h3>About EnglishHub</h3>
-                    <p>Platform pembelajaran Bahasa Inggris untuk mahasiswa Telkom University. Kami menyediakan artikel
-                        berkualitas untuk membantu Anda menguasai Bahasa Inggris.</p>
+        <div class="container footer-content">
+            <div class="footer-main">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/images/telkom-university-seeklogo.png" alt="Logo" class="logo-image">
+                        <!-- <span>EnglishHub</span> -->
+                    </div>
+                    <p>A collection of English assignments written by Afrizal, Rezza, Yuliana, and Lely as part of an English class.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0C4.477 0 0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.879V12.89h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.989C16.343 19.129 20 14.99 20 10c0-5.523-4.477-10-10-10z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-
-                <!-- Quick Links -->
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html">About Team</a></li>
+                        <li><a href="articles.html">All Essays</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="articles.html">Technology</a></li>
+                        <li><a href="articles.html">Learning</a></li>
+                        <li><a href="articles.html">Academic</a></li>
+                    </ul>
+                </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>Email: info@englishhub.edu</p>
-                    <p>Telkom University</p>
-                    <p>Bandung, Indonesia</p>
+                    <ul class="footer-links">
+                        <li>Surabaya</li>
+                        <li>info@englishcorner.edu</li>
+                        <li>Telkom University Surabaya</li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>&copy; 2025 EnglishHub - Telkom University. Tugas Bahasa Inggris Semester 5.</p>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 EnglishCorner - Telkom University Surabaya</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- ==================== SCRIPTS ==================== -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
 </body>
-
 </html>
